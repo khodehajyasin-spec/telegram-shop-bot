@@ -36,7 +36,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
     text = update.message.text
 
-  if text == "🛒 خرید سرویس":
+    if text == "🛒 خرید سرویس":
     keyboard = ReplyKeyboardMarkup(
         [
             ["🧪 تست رایگان 25MB"],
