@@ -36,13 +36,26 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
     text = update.message.text
 
-    if text == "🛒 خرید سرویس":
-        await update.message.reply_text(
-            "🔹 پلن ۱ ماهه\n"
-            "🔹 پلن ۳ ماهه\n"
-            "🔹 پلن ۶ ماهه\n\n"
-            "به‌زودی این بخش به پنل مرزبان متصل می‌شود."
-        )
+  if text == "🛒 خرید سرویس":
+    keyboard = ReplyKeyboardMarkup(
+        [
+            ["🧪 تست رایگان 25MB"],
+            ["📦 خرید سرویس"],
+            ["🔙 بازگشت"],
+        ],
+        resize_keyboard=True,
+    )
+
+    await update.message.reply_text(
+        "یکی از گزینه‌های زیر را انتخاب کنید:",
+        reply_markup=keyboard,
+    )
+
+elif text == "🧪 تست رایگان 25MB":
+    await update.message.reply_text(
+        "⏳ درخواست تست شما ثبت شد.\n"
+        "پس از تأیید ادمین، سرویس 25MB با اعتبار 1 ساعت برای شما ساخته می‌شود."
+    )
 
     elif text == "📦 سرویس‌های من":
         await update.message.reply_text("هنوز سرویسی برای شما ثبت نشده است.")
