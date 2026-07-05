@@ -8,11 +8,12 @@ from telegram.ext import (
 )
 
 TOKEN = " 8986265488:AAGXzIrE1giyjYWICplY944qbaryAD_ntSM "
-
-CARD_NUMBER = "6219861831024566"
-CARD_OWNER = "احمد محمودی"
-ADMIN_USERNAME = "@config_admin_starlink"
-SHOP_NAME = "V2ray Shop"
+from config import (
+    CARD_NUMBER,
+    CARD_OWNER,
+    ADMIN_USERNAME,
+    SHOP_NAME,
+)
 
 keyboard = [
     ["🛒 خرید سرویس", "📦 سرویس‌های من"],
